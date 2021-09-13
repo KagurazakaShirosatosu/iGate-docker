@@ -8,5 +8,5 @@ IGSERVER => 要上传的服务器
 IGLOGIN  => 呼号 + APRS passcode
 OBEACON  => 上传的iGate服务器的一些设定，经纬度要用度分秒
 ```
-APRS passcode 可以在这边生成：https://apps.magicbug.co.uk/passcode/
+APRS passcode 可以在这边生成：https://apps.magicbug.co.uk/passcode/  
 最后保存之后就可以 `docker-compose up` 了。
