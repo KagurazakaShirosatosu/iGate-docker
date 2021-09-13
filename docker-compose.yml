@@ -1,0 +1,12 @@
+version: '3'
+services:
+  aprs:
+    build: .
+    devices:
+      - /dev/ttyAMA0
+    privileged: true
+    volumes:
+      - ./:/aprs
+    working_dir: /aprs
+    restart: unless-stopped
+    command: /bin/bash -c "rtl_fm -f 144.634M -s 48000 - | direwolf -c sdr.conf -B 1200 -r 48000 -D 1 -"
